@@ -3,10 +3,13 @@
 ### Repository Contents
 This repository contains files for:
   - `/Commands`
+    - `week-06-stataQuickRef.pdf`
   - `/Equations`
+    - `week-06-equations.pdf`
   - `/Lab06`
   - `/ProblemSet-04`
   - `/Slides`
+    - `week-06-slides.pdf`
   - `LICENSE_CODE.md`
   - `LICENSE_TEXT.md`
   - `README.md`
