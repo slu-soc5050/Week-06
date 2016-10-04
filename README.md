@@ -6,8 +6,13 @@ This repository contains files for:
     - `week-06-stataQuickRef.pdf`
   - `/Equations`
     - `week-06-equations.pdf`
+  - `/Extras`
+    - `week-06-slidesExtra.pdf`
   - `/Lab06`
+    - `/Lab-06-Replication` - all replication files
+    - `lab-06.pdf`
   - `/ProblemSet-04`
+    - `ps-04.pdf`
   - `/Slides`
     - `week-06-slides.pdf`
   - `LICENSE_CODE.md`
