@@ -1,0 +1,156 @@
+---
+title: "Lab-06 Replication"
+output: html_notebook
+---
+
+## Introduction
+This is the replication file for Lab-06. It has no dependencies that are required to be loaded, nor does it have associated data.
+
+## Part 1: Sampling Distributions
+### Question 1
+The following code calculates the standard error of this distribution for a situation where $n=500$:
+
+```{r}
+10/sqrt(500)
+```
+
+The standard error of the repeated samples is $0.447$.
+
+### Question 2
+The following code calculates the standard error of this distribution for a situation where $n=1000$:
+
+```{r}
+10/sqrt(1000)
+```
+
+The standard error of the repeated samples is $0.316$.
+
+### Question 3
+The following code calculates the probability of a random sample having a mean greater than or equal to $95$.
+
+```{r}
+zScore <- (95-90)/(10/sqrt(500))
+print(zScore)
+```
+
+```{r}
+pnorm(11.18033, mean = 0, sd = 1, lower.tail = FALSE)
+```
+
+
+A very, very small proportion of these sames will have sample means less-than or equal to $95$.
+
+### Question 4
+The following code calculates the probability of a random sample having a mean greater than or equal to $80$.
+
+```{r}
+zScore <- (80-90)/(10/sqrt(500))
+pnorm(zScore, mean = 0, sd = 1, lower.tail = TRUE)
+```
+
+A very, very small proportion of these sames will have sample means less-than or equal to $80$.
+
+### Question 5
+The following code calculates the power analysis for the sample size required to have a sample mean that is within $1$ percentage point of the population's:
+
+```{r}
+((1.96*10)/1)^2
+```
+
+We would need at least 385 participants to have a sample mean that is within $1$ percentage point of the population's.
+
+### Question 6
+The following code calculates the power analysis for the sample size required to have a sample mean that is within $3$ percentage point3 of the population's:
+
+```{r}
+((1.96*10)/3)^2
+```
+
+We would need at least 43 participants to have a sample mean that is within $3$ percentage points of the population's.
+
+### Question 7
+The following code calculates the power analysis for the sample size required to have a sample mean that is within $5$ percentage point3 of the population's:
+
+```{r}
+((1.96*10)/5)^2
+```
+
+We would need at least 16 participants to have a sample mean that is within $5$ percentage points of the population's.
+
+## Part 2: Predictive Intervals
+### Question 8
+The following code calculates a lower bound and then an upper bound for the $95\%$ predictive interval for $x$:
+
+```{r}
+90-(1.96*10)
+90+(1.96*10)
+```
+
+We are $95\%$ certain that a given value of $x$ should have a value between $70.4$ and $109.6$.
+
+### Question 9
+The following code calculates a lower bound and then an upper bound for the $99.9\%$ predictive interval for $x$:
+
+```{r}
+90-(3.29*10)
+90+(3.29*10)
+```
+
+We are $99.9\%$ certain that a given value of $x$ should have a value between $57.1$ and $122.9$.
+
+### Question 10 
+The following code calculates a lower bound and then an upper bound for the $95\%$ predictive interval for $\bar{x}$:
+
+```{r}
+90-(1.96*(10/sqrt(500)))
+90+(1.96*(10/sqrt(500)))
+```
+
+Based on the predictive interval, a sample mean should fall between $89.123$ and $90.877$ $95\%$ of the time.
+
+### Question 11
+The following code calculates a lower bound and then an upper bound for the $99\%$ predictive interval for $\bar{x}$:
+
+```{r}
+90-(2.58*(10/sqrt(500)))
+90+(2.58*(10/sqrt(500)))
+```
+
+Based on the predictive interval, a sample mean should fall between $88.846$ and $91.154$ $99\%$ of the time.
+
+## Part 3: Confidence Intervals
+### Question 12
+The following code calculates the key value for a $95\%$ confidence interval:
+
+```{r}
+1.96*(10/sqrt(500))
+```
+
+If we take a sample size of $n=500$ from our population, the interval of plus or minus $0.877$ has a $95\%$ chance of covering $\mu$.
+
+### Question 13
+The following code calculates the key value for a $99\%$ confidence interval:
+
+```{r}
+2.58*(10/sqrt(500))
+```
+
+If we take a sample size of $n=500$ from our population, the interval of plus or minus $1.154$ has a $99\%$ chance of covering $\mu$.
+
+### Question 14
+The following code calculates the key value for a $95\%$ confidence interval:
+
+```{r}
+1.96*(10/sqrt(1000))
+```
+
+If we take a sample size of $n=1000$ from our population, the interval of plus or minus $0.620$ has a $95\%$ chance of covering $\mu$.
+
+### Question 14
+The following code calculates the key value for a $99\%$ confidence interval:
+
+```{r}
+2.58*(10/sqrt(1000))
+```
+
+If we take a sample size of $n=1000$ from our population, the interval of plus or minus $0.816$ has a $99\%$ chance of covering $\mu$.
